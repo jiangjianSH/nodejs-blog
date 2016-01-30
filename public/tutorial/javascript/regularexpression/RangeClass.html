@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Range Class  </title>
+<head>
+
+<body>
+<script>
+    var sToMatch = "num1, num2, num3, num4, num5, num6, num7, num8";
+    var reOneToFour = /num[^1-4]/gi;
+    var arrMatches = sToMatch.match(reOneToFour); 
+    
+    alert(arrMatches);
+</script>
+</body>
+</html>

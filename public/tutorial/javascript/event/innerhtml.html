@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Inner Text Example</title>
+</head>
+
+<body>
+    <div id="div1">
+        <h1>Inner Text</h1>
+        <p> This is segment which we discuss the inner html function</p>
+    </div>
+
+    <input type="button" onclick="getInnerHtml()" value="show inner html"/>
+
+    <input type="button" onclick="addTextarea()" value="add text area"/>
+    <script>
+        function getInnerHtml() {
+            var div1 = document.getElementById("div1");
+            alert(div1.innerHTML);
+        } 
+
+        function addTextarea() {
+            var div1 = document.getElementById("div1");
+            div1.innerHTML = "<h1>Changed Inner Text</h1> <p>This is changed text</p>"
+        }
+    </script>
+</body>
+</html>

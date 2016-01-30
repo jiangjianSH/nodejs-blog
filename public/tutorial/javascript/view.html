@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Show What JavaScript can do </title>
+<script>
+function changeImage() {
+    var image = document.getElementById('light');
+    if (image.src.match("bulbon")) {
+        image.src = "img/pic_bulboff.gif";
+    } else {
+        image.src = "img/pic_bulbon.gif";
+    }
+}
+
+function validate() {
+    var data = document.getElementById("data").value;
+    var result = document.getElementById("result");
+    if (data > 10) {
+        result.innerHTML="input error";
+    } else {
+        result.innerHTML = "input ok";
+    }
+
+
+
+}
+
+</script>
+</head>
+<body>
+    <h2>Change Some</h2>
+    <p id="introduction"> If you click change me button, I will change </p>
+    <button type="button" onclick="document.getElementById('introduction').innerHTML = 'You click the button'">Change me</button>
+
+    <br/>
+    <img src="img/pic_bulboff.gif" id="light"  onclick="changeImage()">
+    
+    <br/> 
+    <p>Please input a number between 1 and 10</p></br>
+        First name: <input type="text" name="fname" id="data"><br>
+        <input type="submit" value="提交" onclick="validate()"/>
+        <p id="result"></p>
+    <script>
+
+function sayKeyDown() {
+    var key = document.getElementById("key");
+    key.innerHTML="you push key";
+}
+    </script>
+    <button type="button" onmouseover="sayKeyDown()">lala</button>
+    <p id="key"></p>
+</body>
+</html>

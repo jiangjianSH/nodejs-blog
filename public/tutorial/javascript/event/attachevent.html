@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>  </title>
+</head>
+
+<body>
+    <button id="div"> click me</button>
+<script>
+    var fnClick1 = function() {
+        alert("Clicked!"); 
+    }
+
+    var fnClick2 = function() {
+        alert("Also clicked! "); 
+    }
+
+    var oDiv = document.getElementById("div");
+    oDiv.addEventListener("onclick", fnClick2);
+    oDiv.addEventListener("onclick", fnClick1);
+
+</script>
+</body>
+</html>

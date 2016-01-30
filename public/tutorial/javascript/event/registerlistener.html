@@ -1,0 +1,22 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Three Way to Register Event listener  </title>
+</head>
+
+<body>
+
+<button onclick="alert('using html attribute way')">点击</button>
+<button id="button1">点击1</button>
+<button id="button2">点击2</button>
+
+<script>
+    var button1 = document.getElementById("button1");
+    button1.addEventListener('click', function() {alert('using addEventListener way');}, false);
+
+    var button2 = document.getElementById("button2");
+    button2.onclick = function(evt) {alert(evt);};
+
+</script>
+</body>
+</html>

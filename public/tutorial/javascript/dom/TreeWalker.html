@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Tree Walker</title>
+<script>
+
+var iterator = null;
+function  makeList() {
+    var oDiv = document.getElementById("div1");
+
+    var oFilter = new Object;
+    oFilter.acceptNode = function(oNode) {
+        return (oNode.tagName == "P") ? NodeFilter.FILTER_REJECT: NodeFilter.FILTER_ACCEPT;
+    }
+
+    walker = document.createTreeWalker(oDiv, NodeFilter.SHOW_ELEMENT, oFilter, false);
+    var oOutput = document.getElementById("text1");
+    var oNode = walker.nextNode();
+    while( oNode ) {
+        oOutput.value += oNode.tagName + "\n";
+        oNode = walker.nextNode();
+    }
+}
+</script>
+</head>
+
+<body>
+<div id="div1">
+    <p>Hello <b>World!</b></p>
+
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ul>
+</div>    
+
+<textarea rows="10" cols="40" id="text1"></textarea><br/>
+<input type="button" value="Make List" onclick="makeList()"/>
+</body>
+</html>

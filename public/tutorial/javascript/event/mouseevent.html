@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mouse Event  </title>
+</head>
+
+<body>
+<button type="button" id="mybutton">Button</button>
+<script>
+var myButton = document.getElementById("mybutton");
+
+//define mouseout handler
+myButton.onmouseout = function() {
+    alert("cursour move from button");
+}
+
+//define mouseover handler
+myButton.onmouseover = function() {
+    alert("cursour move over on button");
+}
+
+//define click handler
+myButton.onclick = function() {
+    alert("clicked");
+}
+</script>
+</body>
+</html>

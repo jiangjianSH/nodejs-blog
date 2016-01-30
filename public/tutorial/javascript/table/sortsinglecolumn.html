@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Sort Single Column  </title>
+</head>
+
+<body>
+
+	<table border="1" id="tblSort">
+		<thead>
+			<tr>
+				<th onclick="sortTable('tblSort')" style="cursor:pointer">
+					Last Name
+				</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>Smith</td>
+			</tr>
+			<tr>
+				<td>Johnson</td>
+			</tr>
+			<tr>
+				<td>Henderson</td>
+			</tr>
+			<tr>
+				<td>Williams</td>
+			</tr>
+			<tr>
+				<td>Gilliam</td>
+			</tr>
+			<tr>
+				<td>Walker</td>
+			</tr>
+
+			</tbody>
+
+			<tfoot>
+
+			</tfoot>
+		</table>
+		<script>
+			function compareTRs(oTR1, oTR2) {
+				var sValue1 = oTR1.cells[0].firstChild.nodeValue;
+				var sValue2 = oTR2.cells[0].firstChild.nodeValue;
+				return sValue1.localeCompare(sValue2);
+			}
+
+			function sortTable(oTblId) {
+				var oTable = document.getElementById(oTblId);
+				var oTBody = oTable.tBodies[0];
+				var colDataRows = oTBody.rows;
+				var arrRows = new Array;
+
+				for(var i = 0; i < colDataRows.length; i++) {
+					arrRows[i] = colDataRows[i];
+				}
+
+				arrRows.sort(compareTRs);
+
+				var oDocumentFrag = document.createDocumentFragment();
+				for (var i = 0; i < arrRows.length; i++) {
+					oDocumentFrag.appendChild(arrRows[i]);
+				}
+				oTBody.appendChild(oDocumentFrag);
+			}
+
+		</script>
+	</body>
+	</html>

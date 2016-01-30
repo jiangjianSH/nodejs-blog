@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Alternation</title>
+</head>
+
+<body>
+<script>
+    var reBadWords = /badword|anotherbadword/gi;
+    var sUserInput = "This is a string using badword1 and badword2.";
+    var sFinalText = sUserInput.replace(reBadWords, function(sMatch) {
+        return sMatch.replace(/./g, "*");
+    });
+    alert(sFinalText);
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>System Drag and Drop  </title>
+<script>
+    function handleDragDropEvent(oEvent) {
+        var oTextbox = document.getElementById("txt1");
+        oTextbox.value += oEvent.type + "\n";
+    }
+
+</script>
+</head>
+
+<body>
+<form>
+    <p> Try dragging the text from the textarea to the red square, no drop event fire</p>
+    
+    <form>
+    <input type="text" value="drag this"
+        ondragstart="handleDragDropEvent(event)" 
+        ondrag="handleDragDropEvent(event)"
+        ondragend="handleDragDropEvent(event)"></p>  
+    <div style="background-color:red; height:100px; width:100px"
+        ondragenter="handleDragDropEvent(event)"
+        ondragover="handleDragDropEvent(event)"
+        ondragleave="handleDragDropEvent(event)"
+        ondrog="handleDragDropEvent(event)"></div>
+     <p>
+        <textarea rows="10" cols="50" readonly="readonly" id="txt1"></textarea>
+     </p>
+         
+</form>
+</body>
+</html>

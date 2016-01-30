@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>object constructor</title>
+</head>
+<body>
+<script>
+    /*
+    function Cat(name) {
+        this.name = name;
+        this.talk = function() {
+            alert(this.name + " say meeow!");
+        }
+    }
+
+    cat1 = new Cat("felix");
+    cat1.talk();
+
+
+    cat2 = new Cat("ginger");
+    cat2.talk();
+
+    function Number(number) {
+        this.number = number;
+        return 4;
+    }
+    
+    var myNumber = new Number(8);
+    alert("my number is " + myNumber);
+    */
+    
+    var o = {
+        a: 2,
+        m: function(b) {
+            return this.a + 1;
+        }
+    };
+    
+    console.log(o.m());
+
+    var p = Object.create(o);
+    p.a = 12;
+    console.log(p.m());
+</script>
+</body>
+
+</html>

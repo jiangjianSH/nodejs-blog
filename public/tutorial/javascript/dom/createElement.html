@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create and Remove Element  </title>
+</head>
+
+<body>
+<button onclick="addMessage()">add</button>
+<br/>
+
+<button onclick="removeMessage()">remove</button>
+<br/>
+
+<button onclick="appendMessage()">append</button>
+<br/>
+
+<button onclick="insertMessage()">insert</button>
+<br/>
+
+<script>
+var count = 0;
+
+function addMessage() {
+    count++;
+    var oP = document.createElement("p");
+    var oText = document.createTextNode("Hello World" + count);
+    oP.appendChild(oText);
+    document.body.appendChild(oP);
+}
+
+function removeMessage() {
+    var  oP = document.getElementsByTagName("p")[0];
+    document.body.removeChild(oP);
+}
+
+function appendMessage() {
+    count++;
+    var oNewP = document.createElement("p");
+    var oText = document.createTextNode("Hello Universe! " + count);
+    oNewP.appendChild(oText);
+    var oOldP = document.body.getElementsByTagName("p")[0];
+    oOldP.parentNode.appendChild(oNewP, oOldP);
+}
+
+
+function insertMessage() {
+    count++;
+    var oNewP = document.createElement("p");
+    var oText = document.createTextNode("Hello Universe! " + count);
+    oNewP.appendChild(oText);
+    var oOldP = document.body.getElementsByTagName("p")[0];
+    oOldP.parentNode.insertBefore(oNewP, oOldP);
+}
+</script>
+
+</body>
+</html>

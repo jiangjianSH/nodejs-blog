@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title> JavaScript Inheritance  </title>
+</head>
+
+<body>
+<script>
+function Car(color, price) {
+    this.color = color;
+    this.price = price;
+
+}
+Car.prototype.showColor = function() { window.alert(this.color);};
+Car.prototype.showPrice = function() { window.alert(this.price);};
+ 
+   
+var myCar = new Car("red", 10000);
+myCar.showColor();
+
+function BigCar(color, price, size) {
+    //this.superclass = Car;
+    //this.superclass(color, price);
+    //delete this.superclass;
+
+   // Car.call(this, color, price);
+
+    Car.apply(this, new Array(color, price));
+
+    //define subclass properties and functions
+    this.size = size;
+}
+BigCar.prototype = new Car();
+BigCar.prototype.showSize = function() { window.alert(this.size);};
+
+var myBigCar = new BigCar("blue", 20000, 1);
+myBigCar.showColor();
+myBigCar.showSize();
+
+window.alert(myBigCar.__initialized);
+</script>
+
+</body>
+</html>

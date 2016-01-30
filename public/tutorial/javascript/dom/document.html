@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>DOM Example  </title>
+</head>
+<body>
+<p style="color:red" id="p1"> Hello World!</p>
+<script>
+var oHtml = document;
+
+var oHead = oHtml.firstChild;
+
+var oBody = oHtml.lastChild;
+
+var oP = document.getElementById("p1");
+
+var oP1 = oBody.childNodes.item(0)
+alert("op1 == op " + (oP == oP1));
+alert("id=" + oP.attributes.getNamedItem("style").value);
+
+/*
+alert(oHtml.childNodes.length);
+
+alert("Html element type is " + oHtml.nodeType);
+alert("Head element type is " + oHead.nodeType);
+alert("Body element type is " + oBody.nodeType);
+
+alert("oHead.parentNode == oHtml ? "  +  (oHead.parentNode == oHtml));
+alert("oBody.parentNode == oHtml? " + (oBody.parentNode == oHtml));
+alert("oBody.previousSibling == oHead ? " + (oBody.previousSibling == oHead));
+alert("oHead.nextSibling == oBody? " + (oHead.nextSibling == oBody));
+alert("oHead.ownerDocument == document? " + (oHead.ownerDocument == document));
+*/
+</script>
+</body>
+</html>

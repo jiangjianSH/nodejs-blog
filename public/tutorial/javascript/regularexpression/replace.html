@@ -1,0 +1,23 @@
+<html>
+<head>
+<title> Extended String Method  </title>
+</head>
+
+<body>
+<script>
+
+    //replace method
+    var sToChange = "The sky is red. ";
+    var reRed = /red/;
+    alert(sToChange.replace(reRed, function(sMatch) {
+        return "blue";
+    }));
+
+    //split method
+    var sColor = "red, blue,yellow,green";
+    var reComm = /\,/;
+    var arrColors = sColor.split(reComm);
+    alert("split result: " + arrColors);
+</script>
+</body>
+</html>

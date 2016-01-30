@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Create Table Dynamicly</title>
+</head>
+<body>
+<script type="text/javascript">
+function createTable() {
+	var oTable = document.createElement("table");
+    oTable.setAttribute("border", "1");
+    oTable.setAttribute("width", "100%");	
+	var oTBoby = document.createElement("tbody");
+	oTable.appendChild(oTBoby);
+	
+	//create first row
+	oTBoby.insertRow(0);
+	oTBoby.rows[0].insertCell(0);
+    oTBoby.rows[0].cells[0].appendChild(document.createTextNode("Cell 1, 1"));
+    oTBoby.rows[0].insertCell(1);
+    oTBoby.rows[0].cells[1].appendChild(document.createTextNode("Cell 2, 1"));
+
+    //create second row
+    oTBoby.insertRow(1);
+    oTBoby.rows[1].insertCell(0);
+    oTBoby.rows[1].cells[0].appendChild(document.createTextNode("Cell 1, 2"));
+    oTBoby.rows[1].insertCell(1);
+    oTBoby.rows[1].cells[1].appendChild(document.createTextNode("Cell 2, 2"));	
+
+    document.body.appendChild(oTable);
+}
+</script>
+
+<button onclick="createTable()">Create Table</button>
+</body>
+</html>

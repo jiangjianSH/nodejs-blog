@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <style>
+        a.test {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://jquery.com/">JQuery</a>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("a").click(function( event ) {
+                //alert("Tnanks for visiting!");
+                alert("As you can see, the link no longer took you to jquery.com");
+                event.preventDefault();
+                $(this).hide("slow");
+            });
+        });
+
+//        $("a").addClass("test");
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="js/util.js"></script>
+<script src="js/TextUtil.js"></script>
+<script src="js/ListUtil.js"></script>
+<title>Regisitor</title>
+</head>
+
+<body>
+    <div id="regisitor-desc">
+        <h1>新用户注册</h1>
+    </div>
+
+    <div id="registor-form">
+        <form action="javascript: alert('action is frist')" method="POST">
+
+            <label for="name">姓名: 
+            <input type="text" name="name"> 
+            </label>
+            <br/>
+
+            <label for="sex">性别:
+
+            </label>
+            <br/>
+
+            <label for="age">年龄:
+            <select name="selAge" id="age">
+                <option value="1">18-21</option>
+                <option value="2">22-25</option>
+                <option value="3">26-29</option>
+                <option value="4">30-34</option>
+            </select>
+            </label>
+            <br/>
+
+            <label for="age1">年龄1:
+            <select name="selAge" id="age1">
+            </select>
+            </label>
+            <br/>
+
+            <label for="password">密码:
+            <input type="password" name="password"/>
+            </label>
+            <br/>
+
+            <label for="rePassword">密码:
+            <input type="password" name="rePassword"/>
+            </label>
+            <br/>
+
+            <label for="tel">电话
+            <input id="tel"  validChars="0123456789" onblur="TextUtil.blurAllow(this)" onkeydown="TextUtil.numericScroll(this, event)" onkeypress="return TextUtil.allowChars(this, event)"/>
+            </label>
+            <br/>
+
+            <label for="address">地址:
+            <input type="text" id="address" value="您的住址..." size="50" maxlength="200"/>
+            </label>
+            <br/>
+
+            <label for="interest">兴趣
+            <input id="interest" invalidchars="0123456789" onkeypress="return TextUtil.blockChars(this, event)"/>          
+            </label>
+            <br/>
+ 
+            <label for="description">自我描述:<br/>
+            <textarea rows="8" cols="50" id="description" maxlength="10" onkeyup="FormUtil.tabForward(this)">您的自我介绍...</textarea>  
+            </label>
+            <br/>
+
+            <input type="text" id="input1"/>
+            <input type="text" id="input2"/>
+            <input type="button" onclick="doAdd()" value="增加"/>           
+            <input type="button" onclick="doRemove()" value="删除"/>           
+            <input type="button" onclick="doMove()" value="移动"/>           
+            <input type="button" onclick="doUp()" value="上移"/>           
+            <input type="button" onclick="doDown()" value="下移"/>           
+            <input type="button" value="注册" onclick="showForm()"/>
+            <input type="reset" value="重置"/>
+        </form>
+    </div>
+    
+    <script>
+        function doAdd() {
+            var oListbox = document.getElementById("age");
+            var oInput1 = document.getElementById("input1");
+            var oInput2 = document.getElementById("input2");
+            ListUtil.add(oListbox, oInput1.value, oInput2.value);
+        }
+        function doRemove() {
+            var oListbox = document.getElementById("age");
+            var oInput1 = document.getElementById("input1");
+            ListUtil.remove(oListbox, oInput1.value);
+        }
+
+        function doMove() {
+            var oListboxFrom = document.getElementById("age");
+            var oListboxTo = document.getElementById("age1");
+            var oInput1 = document.getElementById("input1");
+            ListUtil.move(oListboxFrom, oListboxTo, oInput1.value);
+        }
+
+        function doUp() {
+            var oListbox = document.getElementById("age");
+            var oInput1 = document.getElementById("input1");
+            ListUtil.shiftUp(oListbox, oInput1.value);
+        }
+
+        function doDown() {
+            var oListbox = document.getElementById("age");
+            var oInput1 = document.getElementById("input1");
+            ListUtil.shiftDown(oListbox, oInput1.value);
+        }
+    </script>
+</body>
+
+</html>

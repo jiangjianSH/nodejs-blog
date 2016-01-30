@@ -1,0 +1,23 @@
+<html>
+<head>
+<title> SetInterval </title>
+</head>
+
+<body>
+<script>
+    var iNum = 0;
+    var iMax = 100;
+    var iIntervalId = null;
+
+    function incNum() {
+        iNum++;
+        console.log(iNum);
+        if (iNum == iMax) {
+            clearInterval(iIntervalId);
+        }
+    }
+
+    iIntervalId = setInterval(incNum, 500);
+</script>
+</body>
+</html>

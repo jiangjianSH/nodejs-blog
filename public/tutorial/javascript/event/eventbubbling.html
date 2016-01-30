@@ -1,0 +1,16 @@
+<html onclick="alert('html')">
+<head>
+<title>Prevent Event Propagation  </title>
+</head>
+
+<body onclick="alert('body')">
+
+<input type="button" value="Click Me" onclick="handler(event)" />
+<script>
+    function handler(oEvent) {
+        alert('input');
+        oEvent.stopPropagation(); 
+    }
+</script>
+</body>
+</html>

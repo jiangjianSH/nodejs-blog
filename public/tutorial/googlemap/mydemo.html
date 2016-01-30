@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Google Map </title>
+<meta charset="UTF-8">
+<script src="http://maps.googleapis.com/maps/api/js"> </script>
+<script>
+function loadMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(10, 50),
+        zoom:12,
+        mapTypeId:google.maps.MapTypeId.SATELLITE
+    };
+
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+
+google.maps.event.addDomListener(window, 'load', loadMap);
+</script>
+</head>
+
+<body>
+<center>
+<h1>Google Map</h1>
+<div id="map" style="width:1000px; height:500px;">
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,17 @@
+var TextUtil = new Object;
+
+TextUtil.blockChars = function(oTextbox, oEvent) {
+    var sInvalidChars = oTextbox.getAttribute("invalidchars");
+    var sChar = String.fromCharCode(oEvent.charCode);
+
+    var bIsValidChar = sInvalidChars.indexOf(sChar) == -1;
+    return bIsValidChar || oEvent.ctrlKey;
+}; 
+
+TextUtil.allowChars = function(oTextbox, oEvent) {
+    var svalidChars = oTextbox.getAttribute("validchars");
+    var sChar = String.fromCharCode(oEvent.charCode);
+
+    var bIsValidChar = svalidChars.indexOf(sChar) > -1;
+    return bIsValidChar || oEvent.ctrlKey;
+}; 

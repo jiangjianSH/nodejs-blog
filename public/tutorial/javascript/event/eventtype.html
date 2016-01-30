@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Event Type</title>
+</head>
+
+<body>
+<button id="mybutton">Button</button>
+<script>
+function handleEvent(oEvent) {
+    if (oEvent.type == "click") {
+        alert( oEvent.target + " is click!\n" + " X: " + oEvent.clientX + " Y: " + oEvent.clientY + "\n press: " + oEvent.k);
+    } else if (oEvent.type == "mouseover") {
+        alert(oEvent.target + " is mouse Over" + oEvent.clientX + " Y: " + oEvent.clientY);
+    }
+}
+
+var button = document.getElementById("mybutton");
+button.onclick = handleEvent;
+button.onmouseover = handleEvent;
+</script>
+</body>
+</html>

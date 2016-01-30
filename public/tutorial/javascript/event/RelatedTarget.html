@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Mouse Event  </title>
+</head>
+
+<body>
+<p>Use your mouse to click and double click the red square.</p>
+<div style="width: 100px; height: 100px; background-color: red"
+onmouseover="handleEvent(event)"
+onmouseout="handleEvent(event)"
+onmousedown="handleEvent(event)"
+onmouseup="handleEvent(event)"
+onclick="handleEvent(event)"
+ondblclick="handleEvent(event)" id="div1"></div>
+<p><textarea id="text1" rows="15" cols="50"></textarea></p>
+
+<script>
+function handleEvent(oEvent) {
+    var oTextbox = document.getElementById("text1");
+    oTextbox.value += "\n>" + oEvent.type;
+    oTextbox.value += "\n target is " + oEvent.target.tagName;
+    oTextbox.value += "\n relatedTarget is " + oEvent.relatedTarget.tagName;
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Key Event</title>
+</head>
+
+<body>
+<p>Type some characters into thefirst textobx.</p>
+<p><textarea id="inputtext" rows="15" cols="50" 
+    onKeydown="handleEvent(event)"
+    onKeyup="handleEvent(event)"
+    onKeypress="handleEvent(event)"></textarea></p>
+<p><textarea id="text1" rows="15" cols="50"></textarea></p>
+<script>
+function handleEvent(oEvent) {
+    var oTextbox = document.getElementById("text1");
+    oTextbox.value += "\n>" + oEvent.type;
+    oTextbox.value += "\n keyCode: " + oEvent.keyCode;
+    oTextbox.value += "\n charCode: " + oEvent.charCode;
+    oTextbox.value += "\n target: " + oEvent.target;
+
+    var arrKeys = [];
+    if (oEvent.shiftKey) {
+        arrKeys.push("Shift");
+    }
+    if (oEvent.ctrlKey) {
+        arrKeys.push("Ctrl");
+    }
+    if (oEvent.altKey) {
+        arrKeys.push("Alt");
+    }
+    oTextbox.value += "\n keys donw are " + arrKeys;
+
+    }
+</script>
+</body>
+</html>

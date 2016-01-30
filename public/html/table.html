@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Tag</title>
+<style>
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: black;
+} 
+</style>
+</head>
+
+<body>
+    <h1>How to use table tag rightly in html page? </h1>
+
+    <p>Table is a important tag in html tag which can represent data in humanable way.</p>
+    <p>So, In this page, I will show you how to use table tag to create table basicly.</p>
+    <p>I will show you what parts can be in one table</p>
+    <p>First, We define a simple table, using following html code fragement, Code:</p>
+    <pre>
+&lttable&gt
+    &lttr&gt
+        &lttd&gtName&lt/td&gt
+        &lttd&gtAge&lt/td&gt
+        &lttd&gtAddress&lt/td&gt
+    &lt/tr&gt
+
+    &lttr&gt
+        &lttd&gtJiangjian&lt/td&gt
+        &lttd&gt23&lt/td&gt
+        &lttd&gtShanghai&lt/td&gt
+    &lt/tr&gt
+&lt/table&gt
+    </pre>
+    <p>&lttable&gt represent a table <br>
+    &lttr&gt represent a table row<br>
+    &lttd&gt represent a table data<br>
+    &ltth&gt represent a table head<br>
+    </p>
+    
+    <p>Flowing code will be showed like this:</p>
+    <table>
+     <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+     </tr>
+
+     <tr>
+        <td>Jiangjian</td>
+        <td>23</td>
+        <td>Shanghai</td>
+     </tr>
+    </table>   
+
+    <hr> 
+    <p>Have you noticed that there is no border around the table, so you can use border attribute to specify</p>
+     <table border="1px solid black">
+     <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+     </tr>
+
+     <tr>
+        <td>Jiangjian</td>
+        <td>23</td>
+        <td>Shanghai</td>
+     </tr>
+    </table>   
+    
+    <hr> 
+    <p>use colspan attribute of &ltth&gt tag to span cell to more columns.</p>
+    <table border="1px solid black">
+     <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+     </tr>
+
+     <tr>
+        <td colspan="3">Jiangjian</td>
+     </tr>
+    </table>   
+    
+    <hr> 
+    <p>obviously you can also span cell  to more rows, just use rowspan attribute of &ltth&gt tag.</p>
+    <table border="1px solid black">
+     <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+     </tr>
+
+     <tr>
+        <td rowspan="2">Jiangjian</td>
+        <td>23</td>
+        <td>Shanghai</td>
+     </tr>
+
+     <tr>
+        <td>23</td>
+        <td>Shanghai</td>
+     </tr>
+    </table>   
+    
+    <hr> 
+    <p>Usually, We show a table which comes along a caption to describle what the content in table  is about , also ,you can use &ltcaption&gt in table tag to achieve it.</p>
+    <table border="1px solid black">
+     <caption>User Detail</caption>
+     <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+     </tr>
+
+     <tr>
+        <td>Jiangjian</td>
+        <td>23</td>
+        <td>Shanghai</td>
+     </tr>
+    </table>   
+
+    <hr>
+    <p>you can specify a style on specific table with css</p>
+    <table id="t01">
+     <caption>User Detail</caption>
+     <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+     </tr>
+
+     <tr>
+        <td>Jiangjian</td>
+        <td>23</td>
+        <td>Shanghai</td>
+     </tr>
+    </table>   
+
+    <p>en..g, Do you think it looks nice , now I don't learn css , I will explain later</p>
+
+</body>
+
+</html>

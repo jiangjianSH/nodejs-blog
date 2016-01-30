@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Operation</title>
+</head>
+
+<body>
+    <script>
+        /*
+       var str = "abc";
+       for (i=1; i <= 100000; i++) {
+           str += "\n" + i + "jiangjian"; 
+       }
+       alert("result is " + str);
+
+        function StringBuffer() {
+            this.__strings__ = new Array;
+        }; 
+
+        StringBuffer.prototype.append = function (str) {
+            this.__strings__.push(str);
+        };
+
+        StringBuffer.prototype.toString = function() {
+            return this.__strings__.join(" ");
+        };
+
+        var buffer = new StringBuffer(); 
+        buffer.append("hello");
+        buffer.append("world");
+        var result = buffer.toString();
+        alert("result: " + result);
+
+        //traditional way to concentrate strings
+        var t1 = new Date();
+        var str1 = "";
+        for (i = 0; i < 100000; i++) {
+            str1 += " jianjian";
+        }
+        var t2 = new Date();
+        document.write(str1+ "Concatenation with plus :" + (t2.getTime() - t1.getTime()) + " milliseconds<br/>");
+
+        //use array to concentanation strings
+        function StringBuffer() {
+            this.__strings__ = new Array;
+        }; 
+
+        StringBuffer.prototype.append = function (str) {
+            this.__strings__.push(str);
+        };
+
+        StringBuffer.prototype.toString = function() {
+            return this.__strings__.join(" ");
+        };
+        var a1 = new Date();
+        var buffer = new StringBuffer(); 
+        for (i = 0; i < 100000; i++) {
+            buffer.append(" jianjian");
+        }
+        var a2 = new Date();
+        document.write(buffer + "Concatenation with plus :" + (a2.getTime() - a1.getTime()) + " milliseconds");
+
+        */
+        Object.prototype.showValue = function() {
+            alert(this.valueOf());
+        }
+        Object.prototype.valueOf= function() {
+            alert("you can not get service currently");
+        }
+
+        var str = "jiangjian";
+        str.valueOf(); 
+
+        var num = 13;
+        num.valueOf();
+    </script>
+</body>
+</html>

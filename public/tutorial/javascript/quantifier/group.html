@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Group  </title>
+</head>
+
+<body>
+<script>
+    var re= /^\s+(.*?)\s+$/;
+    String.prototype.trim = function() {
+        return this.replace(re, "$1");
+    }
+    
+    var sTest = "     This  is my site    ";
+    alert("[" + sTest + "]");
+    alert("[" + sTest.trim() + "]");
+
+
+    var sToMatch = "#123445";
+    var reNumbers = /#(\d+)/;
+    alert(reNumbers.test(sToMatch));
+    alert(RegExp.$1);
+
+    var sToChange = "1234 5678";
+    var reMatch = /(\d{4}) (\d{4})/;
+    var sNew = sToChange.replace(reMatch, "$2 $1");
+    alert(sNew);
+</script>
+</body>
+</html>

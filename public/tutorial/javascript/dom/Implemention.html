@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Implementation object  </title>
+</head>
+
+<body>
+<script>
+    var bXmlLevel1 = document.implementation.hasFeature("XML", "1.0");
+    var bXmlLevel2 = document.implementation.hasFeature("XML", "2.0");
+    var bXmlLevel3 = document.implementation.hasFeature("XML", "3.0");
+
+    document.write("DOM Level 1: " + bXmlLevel1 + "<br/>");
+    document.write("DOM Level 2: " + bXmlLevel2 + "<br/>");
+    document.write("DOM Level 3: " + bXmlLevel3 + "<br/>");
+</script>
+</body>
+</html>

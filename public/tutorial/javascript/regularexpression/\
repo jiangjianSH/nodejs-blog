@@ -1,0 +1,16 @@
+<html>
+<head>
+<title> Extended String Method  </title>
+</head>
+
+<body>
+<script>
+    var sToChange = "The sky is red. ";
+    var reRed = /red/;
+    alert(sToChange.replace(reRed, function(sMatch) {
+        return "blue";
+    }));
+
+</script>
+</body>
+</html>
