@@ -9,9 +9,9 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('localhost:27017/nodetest1');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var example = require('./routes/example');
+var routes = require('./controller/index');
+var users = require('./controller/users');
+var example = require('./controller/example');
 
 var app = express();
 
@@ -49,6 +49,7 @@ app.use(function(req, res, next) {
 // will print stacktrace
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
+    console.log("哈哈");
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
