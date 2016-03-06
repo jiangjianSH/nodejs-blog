@@ -20,7 +20,8 @@ p {
 	font-family: "Arial Black", cuisive;
 	font-size: 1em;
 	font-weight: normal;
-	font-variant: small-caps;
+	/*font-variant: small-caps;
+	text-transform:capitalize;*/
 	line-height: 40px;
 }
 
@@ -44,7 +45,11 @@ a:hover, a:focus, a:active {
 /*这个部分是定义导航栏的显示*/
 nav ul li {
 	display: inline;	
+	float:left;
+	padding-left:10px;
 }
+
+p{clear:both;}
 
 h1 {
   border-top: 4px solid #7c7; /* mid green */
