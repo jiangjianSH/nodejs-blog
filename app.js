@@ -5,17 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var app = express();
-
-//加载与monodb相关的配置
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('localhost:27017/nodetest1');
-
 //加载各个功能模块
 var index = require('./controller/index');
 var users = require('./controller/users');
 var patterns = require('./controller/patterns');
+
+//获取Express实例对象
+var app = express();
 
 //设置服务器全局信息
 app.locals.title = "blog based on expressjs"
@@ -48,15 +44,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 
-
-app.use("/", index);
-app.use("/patterns", patterns);
-app.use("/users", users);
-
+//加载与monodb相关的配置
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/nodetest1');
 app.use(function(req, res, next) {
 	req.db = db;
 	next();
 });
+
+app.use("/", index);
+app.use("/patterns", patterns);
+app.use("/users", users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
