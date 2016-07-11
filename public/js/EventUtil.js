@@ -1,23 +1,24 @@
-EventUtil.formatEvent = function(oEvent) {
-		if (isIE && isWin) {
-			oEvent.charCode = (oEvent.type == “ keypress") ? oEvent.keyCode : 0;
-			oEvent.eventPhase = 2;
-			oEvent.isChar = (oEvent.charCode > 0);
-			oEvent.pageX = oEvent.clientX + document.body.scrollLeft;
-			oEvent.pageY = oEvent.clientY + document.body.scrollTop;
-			oEvent.preventDefault = function() {
-				this.returnValue = false;
-			};
-			if (oEvent.type == “ mouseout") {
-				oEvent.relatedTarget = oEvent.toElement;
-			} else if (oEvent.type == “ mouseover") {
-				oEvent.relatedTarget = oEvent.fromElement;
-			}
-			oEvent.stopPropagation = function() {
-				this.cancelBubble = true;
-			};
-			oEvent.target = oEvent.srcElement;
-			oEvent.time = (new Date).getTime();
-		}
-		return oEvent;
-};
+/**
+ * 添加事件,兼容iE9(但是不传递this参数)
+ * @param elem
+ * @param type
+ * @param handler
+ */
+function addEvent(elem, type, handler) {
+    if (document.addEventListener) {
+        var addEvent = function(elem, type, handler) {
+            elem.addEventListener(type, handler, false);
+        }
+        var removeEvent = function(elem, type, handler) {
+            elem.removeEventListener(type, handler, false);
+        }
+    } else {
+        var addEvent = function(elem, type, handler) {
+            elem.attachEvent("on" + type, handler);
+        }
+        
+        var removeEvent = function(elem, type, handler) {
+            elem.detachEvent("on" + type, handler);
+        }
+    }
+}

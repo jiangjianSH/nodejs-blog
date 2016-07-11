@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assign Event Handler</title>
+</head>
+<body>
+
+
+<input type="button" onclick="alert('After')" id="name" value="Click me">
+<script>
+    document.getElementById("name").onclick = function() {
+        alert("Before");
+    }
+    document.getElementById("name").addEventListener("click", function(){
+        alert("middle");
+    }, false);
+</script>
+
+<input type="button" onclick="hideText()" value="hide text">
+<p id="text">I will be disappear if you click button above</p>
+<p>Last words</p>
+<script>
+    function hideText() {
+        var text = document.getElementById("text");
+        text.style.display='none';
+    }
+</script>
+
+</body>
+</html>

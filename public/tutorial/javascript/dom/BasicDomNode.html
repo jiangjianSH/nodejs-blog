@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Basic Dom Node</title>
+</head>
+<body>
+    <div>Allowed Readers:</div>
+    <ul>
+        <li>Alice</li>
+        <li>Bob</li>
+    </ul>
+
+    <!--this is just comment -->
+    <script>
+        alert(document.body.innerHTML);
+        var childNodes = document.body.childNodes;
+        for(var i = 0; i < childNodes.length; i++) {
+            if (childNodes[i].nodeType != 1) continue;
+            alert("Node:" + childNodes[i]);
+            alert("Node Name: " + childNodes[i].nodeName);
+            alert("Tag Name: " + childNodes[i].tagName);
+        }
+    </script>
+</body>
+</html>

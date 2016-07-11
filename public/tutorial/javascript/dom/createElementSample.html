@@ -1,0 +1,62 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DOM createElement 演示</title>
+</head>
+<body>
+    <p>
+        <p>this is will be removed</p>
+        <p>this is a line</p>
+        <p>this is a an</p>
+    </p>
+    <h1>这是第一行.</h1>
+    <p>作者:姜健</p>
+
+    <script>
+        function remove(elem) {
+           return  elem.parentNode.removeChild(elem);
+        }
+
+        function removeChildren(elem) {
+//            while(elem.lastChild) {
+//                elem.removeChild(elem.lastChild);
+//            }
+            elem.innerHTML = "";
+        }
+
+        function insertAfter(elem, refElem) {
+            var refElmtNextSlibing = refElem.nextSibling;
+            return refElem.parentNode.insertBefore(elem, refElmtNextSlibing);
+        }
+
+        removeChildren(document.body.firstChild);
+
+        //remove h1 tag
+        var h1 = document.body.children[0];
+        remove(h1);
+
+        var p = document.createTextNode('这是正文.');
+        document.body.insertBefore(p, document.body.firstChild);
+
+        var lastWord = document.createElement("p");
+        var words = document.createTextNode("这是最后一段");
+        lastWord.appendChild(words);
+
+        insertAfter(lastWord, document.body.lastChild);
+
+//        var ul = document.createElement("ul");
+//        document.body.appendChild(ul);
+//        while(true) {
+//            var data = prompt("Enter the contents for the item", "");
+//            if (data === null) {
+//                break;
+//            }
+//
+//            var li = document.createElement("li");
+//            li.appendChild(document.createTextNode(data));
+//            ul.appendChild(li);
+//        }
+        document.write("刘林");
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Element</title>
+    <style>
+        .red  {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">this is heading</h1>
+    <p id="para">I want to write a blog about javascript
+        <em class="red">Yes</em>
+    </p>
+
+    <input type="text" name="name" value="nameValue">
+    <script>
+        //find by id
+        var heading = document.getElementById("heading");
+        console.log("heading content is :" + heading.innerText);
+
+        //find by tag name
+        var param = document.getElementsByTagName("p");
+        for(var i = 0; i < param.length; i++) {
+            console.log(param[i].innerHTML);
+        }
+
+        //find by name
+        var inputs = document.getElementsByName("name");
+        for(var j = 0; j < inputs.length; j++) {
+            console.log(inputs[j].innerText);
+        }
+
+        //find by class name
+        var em = document.getElementsByClassName("red");
+        console.log(em[0].innerText);
+    </script>
+</body>
+</html>

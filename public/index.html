@@ -2,57 +2,43 @@
 
 <head>
     <title>Keeping</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta charset="UTF-8">
     <meta name="author" content="Jiangjian">
     <meta name="keywords" content="Html, Css, XML">
-    <link rel="stylesheet" href="css/blog.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/index.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
 </head>
 
 <body>
-    <nav>
-        <ul>
-           <li>
-               <a href="index.html">首页</a></br>
-           </li>
+<nav>
+    <ul>
 
-           <li>
-            <a title="java 技术方面" href="tutorial/java/index.html">Java技术</a></br>
-        </li>
+        <div class="dropdown">
+            <li class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="true">Java</li>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li class="dropdown-header">可选专题</li>
+                <li><a href="#">Java Basic</a></li>
+                <li><a href="#">Java Advanced</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="#">Spring Framework(Not Available)</a></li>
+                <li><a href="#">Play Framework</a></li>
+            </ul>
+        </div>
 
-        <li>
-            <a href="tutorial/linux/index.html">Linux</a><br>
-        </li>
-
-        <li>
-            <a href="tutorial/html/index.html">Html</a><br>
-        </li>
-
-        <li>
-            <a href="tutorial/javascript/index.html">JavaScript</a><br>
-        </li>
-
-        <li>
-            <a href="tutorial/css/index.html">Css</a><br>
-        </li>
-
-        <li>
-            <a href="turorial/nodejs/index.html">Nodejs</a><br>
-        </li>
-
-        <li>
-            <a href="tutorial/front-end/index.html">前端框架</a><br>
-        </li>
-
-        <li>
-            <a href="tutorial/notes/index.html">杂谈</a><br>
-        </li>
-
-        <li>
-            <a href="author.html">关于我</a><br>
-        </li>
+        <div class="dropdown">
+            <li class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="true">Linux
+            </li>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">Shell</a></li>
+                <li><a href="#">LFS</a></li>
+                <li><a href="#">GNU</a></li>
+            </ul>
+        <div>
     </ul>
 </nav>
 
