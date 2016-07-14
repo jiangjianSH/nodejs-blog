@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="http://www.baidu.com" onclick="forbid()">baidu.com</a>
+<script>
+        function forbid() {
+            event = event || window.event;
+            if (event.preventDefault) {
+                event.preventDefault();
+            } else {
+                event.returnValue = false;
+            }
+        }
+</script>
+</body>
+</html>

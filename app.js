@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 var index = require('./controller/index');
 var users = require('./controller/users');
 var patterns = require('./controller/patterns');
+var article = require('./controller/article');
 
 //获取Express实例对象
 var app = express();
@@ -40,7 +41,7 @@ app.use(tracker);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true}));
 app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 
@@ -56,6 +57,7 @@ app.use(function(req, res, next) {
 app.use("/", index);
 app.use("/patterns", patterns);
 app.use("/users", users);
+app.use("/article", article);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
