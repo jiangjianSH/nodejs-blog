@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <title>Keeping</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -7,18 +7,19 @@
     <meta name="author" content="Jiangjian">
     <meta name="keywords" content="Html, Css, XML">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
 <nav>
     <ul>
 
-        <div class="dropdown">
+        <div class="dropdown" style="display:inline">
             <li class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-               aria-expanded="true">Java</li>
+                aria-expanded="true">Java</li>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                 <li class="dropdown-header">可选专题</li>
                 <li><a href="#">Java Basic</a></li>
@@ -29,31 +30,42 @@
             </ul>
         </div>
 
-        <div class="dropdown">
+        <div class="dropdown" style="display:inline">
             <li class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="true">Web</li>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="tutorial/html/index.html">Html</a></li>
+                <li><a href="#">Javascript</a></li>
+                <li class="disabled"><a href="#">Css</a></li>
+            </ul>
+        </div>
+
+        <div class="dropdown"  style="display:inline">
+            <li class="btn btn-default dropdown-toggle" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="true">Linux
             </li>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
                 <li><a href="#">Shell</a></li>
                 <li><a href="#">LFS</a></li>
                 <li><a href="#">GNU</a></li>
             </ul>
-        <div>
-            <a href="./manager/writeArticle.html">写博客</a>
+        </div>
     </ul>
 </nav>
 
+<hr>
+
 <section>
-    <p>	I am a working-hard guy, and I very like computer science, but I think it is necessary for techonician to write down what they learn. one purpose is to review after a long time , another purpose you can choose open your knowledge to other newbie.</p>
-    <p id="id1">to fulfill</p>
-    <p>I am a working-hard guy, and I very like computer science, but I think it is necessary for techonician to write down what they learn. one purpose is to review after a long time , another purpose you can choose open your knowledge to other newbie.</p>
-</section>	
+    <h1>写在前面...</h1>
+    <p>这个网站是个人的学习笔记，里面的内容都是根据自己的理解所写，如果你发现当中有纰漏，请联系我（jiangjian199204@gmail.com).</p>
+</section>
 
 
 <footer>
- Copyright @ Jiangjian.com
-</footer>	
-
+    Copyright @ jiangjianSh.github.io
+</footer>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,68 @@
+img {
+	width: 700px;
+	height:	400px;
+}
+
+img[src$="jpg"] {
+	width: 600px;		
+	height: 400px;
+	margin-left: 100px;
+}
+
+body {
+	margin: 0 auto;	
+	width: 800px;
+	background-color: #ffffb8;
+}
+
+p {
+	text-indent: 20px;
+	font-family: "Arial Black", cuisive;
+	font-size: 1em;
+	font-weight: normal;
+	/*font-variant: small-caps;
+	text-transform:capitalize;*/
+	line-height: 40px;
+}
+
+a:link, a:visited {
+	padding: 1px 10px 1px 10px;
+	color: #fff;
+	background: #555;
+	border-radius: 3px;
+	border: 1px outset rgba(50,50,50,.5);
+	font-family: georgia, serif;
+	font-size: 14px;
+	font-style: italic;
+	text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+	background-color: #666;
+}
+
+
+/*这个部分是定义导航栏的显示*/
+nav ul li {
+	display: inline;	
+	float:left;
+	padding-left:10px;
+}
+
+p{clear:both;}
+
+h1 {
+  border-top: 4px solid #7c7; /* mid green */
+  background-color: #efe;     /* pale green */
+  color: #050;                /* dark green */
+}
+
+.photo-description {
+	text-align: center;
+}
+
+video {
+	width: 600px;
+	height: 400px;
+	text-align: center;
+}

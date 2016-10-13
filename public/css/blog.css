@@ -1,68 +1,73 @@
-img {
-	width: 700px;
-	height:	400px;
-}
-
-img[src$="jpg"] {
-	width: 600px;		
-	height: 400px;
-	margin-left: 100px;
+	html {
+	background-image: url("../img/article-background.jpg");
+	background-attachment:fixed;
 }
 
 body {
-	margin: 0 auto;	
-	width: 800px;
-	background-color: #ffffb8;
+	border-radius: 10px;
+	width:1200px;
+	background-color:white;
+}
+
+main {
+	width:900px;
+	color:black;
+	padding-right:5px;
+	border-right: 2px solid lightgray;
+	float:left;
+	display:inline;
+}
+
+h1 {
+	color: #a0844c;
+	font-size: 42px;
 }
 
 p {
-	text-indent: 20px;
-	font-family: "Arial Black", cuisive;
-	font-size: 1em;
-	font-weight: normal;
-	/*font-variant: small-caps;
-	text-transform:capitalize;*/
-	line-height: 40px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-style: normal;
 }
 
-a:link, a:visited {
-	padding: 1px 10px 1px 10px;
-	color: #fff;
-	background: #555;
-	border-radius: 3px;
-	border: 1px outset rgba(50,50,50,.5);
-	font-family: georgia, serif;
-	font-size: 14px;
-	font-style: italic;
+a{
+	font-weight: bold;
+	font-size:larger;
+}
+
+a:link {color: red} /**表示链接暂未点击**/
+a:visited {color: green}/**表示链接已经被点击过**/
+a:hover {color: black}/**表示当鼠标在链接上面划过时**/
+a:active {color: yellow}/**表示当链接被点击时**/
+
+aside {
+	font-size:16px;
+	float: inherit;
+	display:inline;
+	margin-left:6px;
+	padding-left:2px;
+	border-left:4px solid green;
+	margin-top: 17px;
+}
+
+
+aside ul li {
+	display:inline
+}
+
+img {
+	float:right;
+	width:80px;
+	height: 40px;
+}
+
+footer {
+	font-family:"Times New Roman", Times, serif;
+	font-size: 12px;;
+	text-align:right;
+}
+
+.resources a {
+	color: #33AA88;
+	font-size: 16px;
+	margin-left:4px;
 	text-decoration: none;
-}
-
-a:hover, a:focus, a:active {
-	background-color: #666;
-}
-
-
-/*这个部分是定义导航栏的显示*/
-nav ul li {
-	display: inline;	
-	float:left;
-	padding-left:10px;
-}
-
-p{clear:both;}
-
-h1 {
-  border-top: 4px solid #7c7; /* mid green */
-  background-color: #efe;     /* pale green */
-  color: #050;                /* dark green */
-}
-
-.photo-description {
-	text-align: center;
-}
-
-video {
-	width: 600px;
-	height: 400px;
-	text-align: center;
 }

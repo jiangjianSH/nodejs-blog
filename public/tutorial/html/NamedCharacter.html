@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Named Character References</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/blog.css">
+
+<body>
+    <nav>
+        <a href="index.html"><img src="../../img/goback.png"></a>
+    </nav>
+    <article>
+      <header>
+        <h1>命名字符</h1>
+      </header>
+      <main>
+        <p>大家都知道在html源代码当中，"<"和">"字符都有其特殊的意义，用来标志html元素的开始和结束.</p>
+
+        <pre>
+          &ltp&gt这是一个段落&lt/p&gt
+        </pre>
+
+        <p>"&ltp&gt"表示段落元素的开始，而"&lt/p&gt"表示段落元素的结束, 其中文字是元素的内容.
+        <p>但是，我们应如何在页面输出"&lt",同时不影响正常的html页面的解析呢？Html当中定义了命名字符(Named Characters)来实现输出具有特殊意义的字符.</p>
+        <p>它的用法就是在你需要输出类似"&lt"这些特殊字符的时候，使用该字符对应的命名字符,例如"&lt"的特殊字符就是"&amplt".</p>
+
+        <p>下面列出的几个你可能会经常遇到的命名字符:</p>
+        <ul>
+          <li>&lt --- &amplt</li>
+          <li>&gt --- &ampgt</li>
+          <li>&amp --- &ampamp</li>
+          <li>&quot --- &ampquto</li>
+        </ul>
+        <p>如果你需要了解全部的命名字符，请参考:<a href="https://dev.w3.org/html5/html-author/charref">W3C命名字符参考</a></p>
+      </main>
+
+      <aside>
+        推荐资源:
+        <ul class="resources">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction" title="mdn对于html的简要描述">1. mdn的Html简介</a></li>
+        </ul>
+      </aside>
+    </article>
+
+
+    <footer style="clear:left;">
+      <address>姜健写于上海 2016/8/7</address>
+    </footer>
+</body>
+</html>
