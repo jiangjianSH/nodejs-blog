@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var livereload = require('express-livereload');//这个插件用来支持liveReload功能
 
 //加载各个功能模块
 var index = require('./controller/index');
@@ -13,6 +14,7 @@ var article = require('./controller/article');
 
 //获取Express实例对象
 var app = express();
+livereload(app, config={});//enable livereload functionality work
 
 //设置服务器全局信息
 app.locals.title = "blog based on expressjs"
