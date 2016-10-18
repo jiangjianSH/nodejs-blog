@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css Float</title>
+</head>
+<body>
+<p>
+   <h1> 一、浮动元素自动变块级元素</h1>
+    首先说说块级元素和行内元素区别，简单的来说，块级元素独占一行，可以设置宽高以及边距，
+    行内元素不会独占一行，设置宽高行距等不会起效。常见的块级元素有：h1~h6、p、div、ul、
+    table，常见的行内元素有：span、a、input、select等。
+</p>
+
+<div style="height: 200px; width: 200px;">
+    <span style="float: left; width: 150px; height: 150px; margin: 5px; padding: 5px;
+        border: solid 1px red; background-color: Olive;">浮动元素span</span>
+</div>
+<div style="height: 200px; width: 200px;">
+    <span style="width: 150px; height: 150px; margin: 5px; padding: 5px; border: solid 1px red;
+    background-color: Olive;">浮动元素span</span>
+</div>
+
+<p>
+    <h1>二、浮动元素后的非浮动元素问题</h1>
+    浮动元素后边的元素若是非浮动行内元素且因为定位产生重叠时，行内元素边框、背景和内容都在该浮动元素“之上”显示，
+    若是非浮动块级元素跟在浮动元素后边且在定位后产生重叠时，该块级元素边框和背景在该浮动元素“之下”显示，
+    只有内容在浮动元素不在浮动元素“之下”显示。
+</p>
+<div style="width: 600px; height: 500px; border: solid 1px blue; background-color: yellow;">
+    <div style="float: left; width: 250px; height: 250px; border: solid 1px Aqua; background-color: gray;
+margin: 10px 0 0 10px;">
+        浮动DIV</div>
+    <div style="background-color: red; border: solid 1px green; width: 300px; height: 150px;">
+        跟在浮动元素后边的DIV</div>
+<span style="background-color: red; border: solid 1px green;"> 跟在浮动元素后边的span</span>
+    <p>this is one</p>
+</div>
+
+<div style="width: 750px; background: yellow; margin-top: 50px; margin-bottom:50px; border:2px solid black; overflow:hidden;">
+    <div style="float:left;width:200px;height:300px;margin-right:20px; background: blue; margin-top: 5px;"> A </div>
+    <div style="float:left;width:200px; height: 300px;margin-right:20px; background: blue; margin-top: 5px;"> B </div>
+    <div style="float:left;width:200px;height:300px;margin-right:20px; background: blue; margin-top: 5px;"> C </div>
+    <div style="float:left;width:200px;height:300px;margin-right:20px; background: blue;margin-top: 5px;"> D </div>
+</div>
+
+<div style=" height: 200px;">
+
+</div>
+</body>
+</html>

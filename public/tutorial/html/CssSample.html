@@ -4,35 +4,102 @@
     <meta charset="UTF-8">
     <title>Css Sample</title>
     <link rel="stylesheet" href="../../css/cssSample.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/tooltips.css">
 </head>
 <body>
-    <div id="page-container">
-        <div id="main-nav">
-            <ul class="hidden">
-                <li id="about"><a href="#">About</a> </li>
-                <li id="services"><a href="#">Services</a></li>
-                <li id="portfolio"><a href="#">Portfolio</a> </li>
-                <li id="contact"><a href="#">Contact</a> </li>
-            </ul>
+    <nav>
+        <ul>
+            <li><a>首页</a></li>
+            <li><a>Java</a></li>
+            <li>
+                <a class="dropdown">前端</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a>Html</a></li>
+                        <li><a>Css</a></li>
+                        <li><a>Javascript</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a>Sql</a></li>
+            <li><a>设计模式</a></li>
+        </ul>
+    </nav>
+
+    <div class="blog">
+        <div class="description">
+            <h1>The mystery of Css Float Property</h1>
+            <i class="fa fa-pencil"></i><span>姜健</span>
+            <i class="fa fa-calendar"></i><span>2015年10月8日</span>
+            <i class="fa fa-tag"></i><span>Css</span>
+            <i class="fa fa-eye"></i><span>10</span>
         </div>
-        <div id="header">Jiangjian Company</div>
-        <div id="slider-a">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam gravida enim ut risus.
-            Praesent sapien purus, ultrices a, varius ac, suscipit ut, enim. Maecenas in lectus.
-            Donec in sapien in nibh rutrum gravida. Sed ut mauris. Fusce malesuada enim vitae lacus
-            euismod vulputate. Nullam rhoncus mauris ac metus. Maecenas vulputate aliquam odio.
-            Duis scelerisque justo a pede. Nam augue lorem, semper at, porta eget, placerat eget,
-            purus. Suspendisse mattis nunc vestibulum ligula. In hac habitasse platea dictumst.
+
+        <hr>
+        <div class="content">
+            <img src="../../img/gril.jpg">
+            <p>
+            Years ago, when developers first started to make the transition to HTML layouts without tables, one CSS property that suddenly took on a very important role was the float property. The reason that the float property became so common was that, by default, block-level elements will not line up beside one another in a column-based format. Since columns are necessary in virtually every CSS layout, this property started to get used — and even overused — prolifically.
+            The CSS float property allows a developer to incorporate table-like columns in an HTML layout without the use of tables. If it were not for the CSS float property, CSS layouts would not be possible except using absolute and relative positioning — which would be messy and would make the layout unmaintainable.
+            In this article, we’ll discuss exa
+            </p>
         </div>
-        <div id="content">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam gravida enim ut risus.
-            Praesent sapien purus, ultrices a, varius ac, suscipit ut, enim. Maecenas in lectus.
-            Donec in sapien in nibh rutrum gravida. Sed ut mauris. Fusce malesuada enim vitae lacus
-            euismod vulputate. Nullam rhoncus mauris ac metus. Maecenas vulputate aliquam odio.
-            Duis scelerisque justo a pede. Nam augue lorem, semper at, porta eget, placerat eget,
-            purus. Suspendisse mattis nunc vestibulum ligula. In hac habitasse platea dictumst.
+
+
+        <div class="commentBlock">
+            <p class="slogan">最新评论<i class="fa fa-commenting-o"></i></p>
+            <hr>
+            <div  class="comment">
+                <img src="../../img/001.jpg">
+                <span class="commenter">我的南票是程序猿</span>
+                <span class="commentDate">2016年10月17日</span>
+                <p class="commentContent">写的真好，学到好多东西1</p>
+                <i class="voteUp"></i>
+                <i class="voteDown"></i>
+            </div>
+
+            <div  class="comment">
+                <img src="../../img/IMG_20160206_143222_1R.jpg">
+                <span class="commenter">奋斗的小强</span>
+                <span class="commentDate">2016年10月17日</span>
+                <p class="commentContent">good post, there really needs to be a decent
+                    post to explain how relative / asbsolute and floats work together. Many
+                    people seem to try and float “everything” when relative and sbolute positioning
+                    become very handy, and also decrease the amount of markup needed!
+                </p>
+                <i class="voteUp"></i>
+                <i class="voteDown"></i>
+            </div>
         </div>
-        <div id="footer">Footer</div>
+    </div>
+
+    <div class="slide">
+        <div class="author">
+            <header>关于我</header>
+            <div class="cover"><img src="../../img/me.bmp" style="width: 100%;"></div>
+            <span>Name: Jiangjian</span>
+            <span>Email: jiangjian199204@gmail.com</span>
+            <span>Address: Shanghai China</span>
+        </div>
+
+       <div class="search">
+           <header>搜索文章<i class="fa fa-search"></i> </header>
+           <input type="text" placeholder="文章名称" class="searchInput">
+           <input type="button" value="Let's Go">
+       </div>
+
+       <div class="date">
+
+       </div>
+
+       <div class="recommendation">
+           <header>推荐资源</header>
+           <ul>
+               <li>W3c Css标准</li>
+               <li>Csdn css</li>
+           </ul>
+       </div>
     </div>
 </body>
 </html>
