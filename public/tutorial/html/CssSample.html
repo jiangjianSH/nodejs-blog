@@ -10,20 +10,43 @@
 <body>
     <nav>
         <ul>
-            <li><a>首页</a></li>
-            <li><a>Java</a></li>
-            <li>
-                <a class="dropdown">前端</a>
+            <li class="index"><a>首页</a></li>
+            <li class="java dropdown">
+                <a class="mainNav">Java</a>
                 <div class="dropdown-content">
-                    <ul>
+                    <ul class="subNav">
+                        <li><a>Core Java</a></li>
+                        <li><a>Spring</a></li>
+                        <li><a>Hibernate</a></li>
+                        <li><a>Mybatis</a></li>
+                        <li><a>Redis</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="frontend dropdown">
+                <a class="mainNav">前端</a>
+                <div class="dropdown-content">
+                    <ul class="subNav">
                         <li><a>Html</a></li>
                         <li><a>Css</a></li>
                         <li><a>Javascript</a></li>
                     </ul>
                 </div>
             </li>
-            <li><a>Sql</a></li>
-            <li><a>设计模式</a></li>
+            <li class="sql dropdown">
+                <a>Sql</a>
+                <div class="dropdown-content">
+                    <ul class="subNav">
+                        <li><a>Sql</a></li>
+                        <li><a>Mysql</a></li>
+                        <li><a>Postgres</a></li>
+                        <li><a>Oracle</a></li>
+                        <li><a>MongoDB</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="design-pattern"><a>设计模式</a></li>
         </ul>
     </nav>
 
